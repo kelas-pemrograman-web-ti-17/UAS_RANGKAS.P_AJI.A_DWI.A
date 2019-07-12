@@ -1,0 +1,56 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Pasien RS ADE
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Pasien
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputrumah_sakit", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodepasien') Kode Pasien
+                                        .col-sm-10
+                                            input#kodepasien.form-control(type='text' name="kodepasien" placeholder='Kode Pasien')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='namapasien') Nama Pasien
+                                        .col-sm-10
+                                            input#namapasien.form-control(type='text' name="namapasien" placeholder='Nama Pasien')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='alamat') Alamat Pasien
+                                        .col-sm-10
+                                            input#alamat.form-control(type='text' name="alamat" placeholder='Alamat Pasien')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='keluhan') Keluhan
+                                        .col-sm-10
+                                            input#keluhan.form-control(type='text' name="keluhan" placeholder='Keluhan')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='hp') No Hp
+                                        .col-sm-10
+                                            input#hp.form-control(type='text' name="hp" placeholder='No Hp')
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

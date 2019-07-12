@@ -1,0 +1,110 @@
+aside.main-sidebar
+    // sidebar: style can be found in sidebar.less
+    section.sidebar
+        // Sidebar user panel
+        .user-panel
+            .pull-left.image
+                img.img-circle(src='/adminlte/dist/img/user2-160x160.jpg' alt='User Image')
+            .pull-left.info
+                p #{session_store.username}
+                a(href='#')
+                    i.fa.fa-circle.text-success
+                    |  Online
+        ul.sidebar-menu(data-widget='tree')
+            li.header MENU
+                li.treeview
+                    a(href='#')
+                        i.fa.fa-dashboard
+                        span Dashboard
+                        span.pull-right-container
+                            i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/home')
+                                    i.fa.fa-circle-o
+                                    |  Home
+                if(session_store.admin == true)
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Dokter
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/inputdata_dokter')
+                                    i.fa.fa-circle-o
+                                    |  Input Data Dokter
+                            li
+                                a(href='/datadata_dokter')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Dokter
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Pasien
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/inputrumah_sakit')
+                                    i.fa.fa-circle-o
+                                    |  Input Data Pasien
+                            li
+                                a(href='/datarumah_sakit')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Pasien
+
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Ruangan
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/inputdata_ruangan')
+                                    i.fa.fa-circle-o
+                                    |  Input Data Ruangan
+                            li
+                                a(href='/datadata_ruangan')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Ruangan
+
+                else
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Dokter
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/data_doktermember')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Dokter
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Pasien
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/datarumah_sakitmember')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Pasien
+
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Ruangan
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/data_ruanganmember')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Ruangan
+
+    // /.sidebar

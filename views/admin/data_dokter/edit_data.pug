@@ -1,0 +1,56 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Dokter
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Dokter
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+data_dokters._id + '/editdata_dokter')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodedokter') Kode Dokter
+                                        .col-sm-10
+                                            input#kodedokter.form-control(type='text' name="kodedokter" placeholder='Kode Dokter' value= (kodedokter == undefined) ? data_dokters.kodedokter: kodedokter)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='namadokter') Nama Dokter
+                                        .col-sm-10
+                                            input#namadokter.form-control(type='text' name="namadokter" placeholder='Nama Dokter' value= (namadokter == undefined) ? data_dokters.namadokter: namadokter)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='spesialis') Spesialis Dokter
+                                        .col-sm-10
+                                            input#spesialis.form-control(type='text' name="spesialis" placeholder='Spesialis Dokter' value= (spesialis == undefined) ? data_dokters.spesialis: spesialis)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='jamkerja') Jam Kerja Dokter
+                                        .col-sm-10
+                                            input#jamkerja.form-control(type='text' name="jamkerja" placeholder='Jam Kerja Dokter' value= (jamkerja == undefined) ? data_dokters.jamkerja: jamkerja)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='hp') No Hp
+                                        .col-sm-10
+                                            input#hp.form-control(type='text' name="hp" placeholder='No Hp' value= (hp == undefined) ? data_dokters.hp: hp)
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
